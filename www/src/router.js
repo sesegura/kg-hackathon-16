@@ -1,5 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
+import auth from './auth'
+
+import store from './vuex/store'
 Vue.use(VueRouter)
 
 // Layouts
