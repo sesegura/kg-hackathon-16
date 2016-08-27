@@ -2,6 +2,7 @@
     <div v-for="blood in bloodTypes">
         <div>{{blood.type}}</div>
     </div>
+    <h1> ¿Cuál es tu tipo de sangre?</h1>
 </template>
 
 <script>
@@ -15,7 +16,7 @@
             { type : 'AB-', key : 'abn' },
             { type : 'O+', key : 'op' },
             { type : 'O-', key : 'on' },
-            { type : '?', key : 'null' }                                                                                    
+            { type : 'No lo conozco', key : 'null' }                                                                                    
         ];        
     };
 

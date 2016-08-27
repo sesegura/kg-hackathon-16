@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>blabla</p>
+        <h1>¿Consumís alguna de las siguientes drogas?</h1>
         <div v-for="drug in drugs">{{drug}}</div>
         <div>
             <button v-on:click="onNoSelected">No</button>

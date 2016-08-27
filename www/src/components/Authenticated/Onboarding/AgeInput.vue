@@ -1,6 +1,7 @@
 <template>
     <div>
-        <input type="text" placeholder="Edad" v-model="age"/>
+        <h1> ¿Cuándo naciste?</h1>
+        <input type="text" placeholder="Día/Mes/Año" v-model="age"/>
         <div class="row center">
             <a class="btn-large waves-effect waves-light orange col s10 offset-s1" v-on:click="next">Continuar</a>
         </div>

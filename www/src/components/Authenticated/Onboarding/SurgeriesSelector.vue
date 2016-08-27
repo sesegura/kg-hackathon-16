@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>blabla</p>
+        <h1>¿Te han realizado alguna cirugía en los últimos 6 meses?</h1>
         <div>
             <button v-on:click="onNoSelected">No</button>
             <button v-on:click="onYesSelected">Si</button>

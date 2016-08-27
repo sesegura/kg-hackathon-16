@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>blabla</p>
+        <h1>¿Tenés alguna de las siguientes enfermedades?</h1>
         <div v-for="disease in diseases">{{disease}}</div>
         <div>
             <button v-on:click="onNoSelected">No</button>
@@ -13,7 +13,7 @@
     module.exports = {
         data : function() {
             return {
-                diseases : ['Anemia', 'Cáncer', 'Hepatitis', 'Enfermedades Venéreas']
+                diseases : ['Anemia', 'Cáncer', 'Hepatitis', 'Enfermedades venéreas']
             }
         },
         
