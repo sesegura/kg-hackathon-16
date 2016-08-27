@@ -11,7 +11,8 @@ var express = require('express'),
     mongoose = require('mongoose');
 
 var app = express(),
-    config = require('./config');
+    config = require('./config'),
+    allow_cross_domain = require('./allow-cross-domain');
 
 // routes
 var users_route = require('./routes/users'),
@@ -35,6 +36,7 @@ app.set('title', 'BloodBank');
 app.use(body_parser.json());
 app.use(body_parser.urlencoded({ extended : false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(allow_cross_domain);
 
 app.use('/users', users_route);
 app.use('/donation/requests', donation_requests_route);
