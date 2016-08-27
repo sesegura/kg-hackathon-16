@@ -1,0 +1,26 @@
+{
+  "name": "kg-hackathon-16",
+  "version": "1.0.0",
+  "description": "konrad hackathon 2016",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sesegura/kg-hackathon-16.git"
+  },
+  "keywords": [
+    "blood"
+  ],
+  "author": "unagi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sesegura/kg-hackathon-16/issues"
+  },
+  "homepage": "https://github.com/sesegura/kg-hackathon-16#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.5.10"
+  }
+}
