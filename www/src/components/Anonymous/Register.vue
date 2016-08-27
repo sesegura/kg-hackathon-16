@@ -28,7 +28,9 @@
 </template>
 
 <script>
+
     import router from '../../router';
+    import { login, logout } from '../../vuex/actions'
 
     module.exports = {
         data : function() {
@@ -38,34 +40,37 @@
                 password : ''
             };
         },
-        
+
+        vuex : {
+            actions: {
+                login
+            }
+        },
+
         methods : {
-            submit : function() {         
+            submit : function() {
                 var data = {
                     name : this.name,
                     email : this.email,
                     password : this.password
                 };
-                
-                debugger;
+
                 $.ajax({
                     method : 'POST',
                     url : 'http://localhost:3000/users',
                     data : data,
-                    success : this._handleSuccess.call(this),
+                    success : this._handleSuccess.bind(this),
                     error : function(){}
-                });
+                })
             },
-            
-            _handleSuccess : function() {
-                
-                this.name = '';
-                this.email = '';
-                this.password = '';
 
-                // continue...
+            _handleSuccess (result) {
+                this.name = ''
+                this.email = ''
+                this.password = ''
                 
-                router.go('/bloodtype');
+                this._resetModel()
+                this.login(result)
             }
         }
     };

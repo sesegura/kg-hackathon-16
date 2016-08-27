@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import auth from './auth'
+import {
+    login,
+    logout
+} from './vuex/actions'
 
 import store from './vuex/store'
 Vue.use(VueRouter)
@@ -101,6 +104,9 @@ router.alias({
 })
 
 router.beforeEach(function (transition) {
+  if (transition.to.guest && store.state.auth) {
+    transition.redirect('/dashboard')
+  }
   if (transition.to.secure && !store.state.auth) {
     transition.redirect('/home')
   }

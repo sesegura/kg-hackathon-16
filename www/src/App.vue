@@ -6,7 +6,15 @@
 
 <script>
 import store from './vuex/store'
+import { login, logout } from './vuex/actions'
+
 export default {
-  store
+  store,
+  vuex: {
+    actions: {
+      login,
+      logout
+    }
+  }
 }
 </script>
