@@ -12,6 +12,8 @@ var app = express(),
 //connect to our database
 var connectionString = config.connection + ":" + config.port + "/" + config.dbname;
 
+console.log(connectionString);
+
 mongoose.connect(connectionString, function(err) {
   if (err) throw err;
   console.log('Succesfully connected to ' + config.dbname);
