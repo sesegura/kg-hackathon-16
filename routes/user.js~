@@ -1,0 +1,18 @@
+'use strict';
+
+var express = require('express'),
+    model = require('../models/init');
+
+
+var router = express.Router(),
+
+
+router.get('/:id', function(req, res) {
+    model.user.findById(req.params.id, function(err, user){
+        console.log(user);
+    });
+}
+
+
+
+
