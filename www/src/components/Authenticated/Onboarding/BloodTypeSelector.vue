@@ -4,7 +4,7 @@
         <form class="col s12">
             <div class="row">
                 <div class="input-field col s12">
-                    <select v-model="bloodType">
+                    <select v-model="bloodType" class="center-align">
                         <option v-for="blood in bloodTypes" v-bind:value="blood.key">{{blood.type}}</option>
                     </select>
                 </div>
@@ -31,16 +31,18 @@
         ];
     };
 
+    var LS_BLOOD_TYPE = 'blood_type';
+
     module.exports = {
         data : function() {
             return {
-                bloodType: 'ap',
+                bloodType: localStorage.getItem(LS_BLOOD_TYPE) || 'ap',
                 bloodTypes : getBloodTypes()
             };
         },
         methods : {
             submit : function() {
-                localStorage.setItem('blood_type', this.bloodType);
+                localStorage.setItem(LS_BLOOD_TYPE, this.bloodType);
                 this.$route.router.go('/onboarding/age');
             }
         },
