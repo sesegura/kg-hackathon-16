@@ -1,0 +1,32 @@
+<template>
+    <div v-for="blood in bloodTypes">
+        <div>{{blood.type}}</div>
+    </div>
+</template>
+
+<script>
+    function getBloodTypes() {
+        return [
+            { type : 'A+', key : 'ap' },
+            { type : 'A-', key : 'an' },
+            { type : 'B+', key : 'bp' },
+            { type : 'B-', key : 'bn' },
+            { type : 'AB+', key : 'abp' },
+            { type : 'AB-', key : 'abn' },
+            { type : 'O+', key : 'op' },
+            { type : 'O-', key : 'on' },
+            { type : '?', key : 'null' }                                                                                    
+        ];        
+    };
+
+    module.exports = {
+        data : function() {
+            return {
+                bloodTypes : getBloodTypes()
+            };
+        }
+    };
+</script>
+
+
+

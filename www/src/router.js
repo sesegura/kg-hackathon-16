@@ -15,6 +15,15 @@ import NotFound from './components/NotFound.vue'
 
 // Authenticated components
 import Dashboard from './components/Authenticated/Dashboard.vue'
+import Onboarding from './components/Authenticated/Onboarding.vue'
+import BloodTypeSelector from './components/Authenticated/Onboarding/BloodTypeSelector.vue'
+import AgeInput from './components/Authenticated/Onboarding/AgeInput.vue'
+import WeightInput from './components/Authenticated/Onboarding/WeightInput.vue'
+import DiseasesSelector from './components/Authenticated/Onboarding/DiseasesSelector.vue'
+import SurgeriesSelector from './components/Authenticated/Onboarding/SurgeriesSelector.vue'
+import DrugsSelector from './components/Authenticated/Onboarding/DrugsSelector.vue'
+import TattoosSelector from './components/Authenticated/Onboarding/TattoosSelector.vue'
+import ThankYou from './components/Authenticated/Onboarding/ThankYou.vue'
 
 // Anonymous components
 import Home from './components/Anonymous/Home.vue'
@@ -42,15 +51,45 @@ router.map({
       }
     }
   },
+    '/onboarding' : {
+        component : Onboarding,
+        subRoutes : {
+            '/bloodtype' : {
+                component : BloodTypeSelector
+            },
+            '/age' : {
+                component : AgeInput
+            },
+            '/weight' : {
+                component : WeightInput            
+            },
+            '/diseases' : {
+                component : DiseasesSelector            
+            },
+            '/surgeries' : {
+                component : SurgeriesSelector            
+            },
+            '/drugs' : {
+                component : DrugsSelector            
+            },
+            '/tattoos' : {
+                component : TattoosSelector            
+            },      
+            '/thanks' : {
+                component : ThankYou            
+            },                                                      
+    },  
   '/': {
     component: Authenticated,
-    secure: true,
+    // secure: true,
     subRoutes: {
       '/dashboard': {
         component: Dashboard
       }
+     }
     }
   },
+
   '*': {
     component: NotFound
   }
