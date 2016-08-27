@@ -4,7 +4,7 @@
   "description": "konrad hackathon 2016",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "dev": "dev"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "express": "^4.14.0",
     "mongoose": "^4.5.10",
     "path": "^0.12.7",
-    "route": "~0.2.5"
+    "route": "~0.2.5",
+    "webpack": "^1.13.2"
   }
 }
