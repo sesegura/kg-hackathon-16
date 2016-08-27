@@ -4,25 +4,66 @@
         <form class="col s12">
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="name" type="text" class="validate">
+                    <input id="name" type="text" v-model="name" class="validate">
                     <label data-error="Campo invalido" for="name">Nombre completo</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
+                    <input id="email" type="email" v-model="email" class="validate">
                     <label  data-error="Campo invalido" for="email">Correo electrónico</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
+                    <input id="password" type="password" v-model="password" class="validate">
                     <label  data-error="Campo invalido" for="password">Contraseña</label>
                 </div>
             </div>
             <div class="row center">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Registrar</button>
+                <button v-on:click="submit" class="btn waves-effect waves-light" type="submit" name="action">Registrar</button>
             </div>
         </form>
     </div>
 </template>
+
+<script>
+    module.exports = {
+        data : function() {
+            return {
+                name : '',
+                email : '',
+                password : ''
+            };
+        },
+        
+        methods : {
+            submit : function() {         
+                var data = {
+                    name : this.name,
+                    email : this.email,
+                    password : this.password
+                };
+                
+                debugger;
+                $.ajax({
+                    method : 'POST',
+                    url : 'http://localhost:3000/users',
+                    data : data,
+                    success : this._resetModel.call(this),
+                    error : function(){}
+                });
+            },
+            
+            _resetModel : function() {
+                alert('success');
+                this.name = '';
+                this.email = '';
+                this.password = '';
+                // continue...
+            }
+        }
+    };
+</script>
+
+

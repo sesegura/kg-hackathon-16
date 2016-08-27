@@ -3,37 +3,43 @@
 
 'use strict';
 
-//Dependencies
+// dependencies
 var express = require('express'),
     path = require('path'),
-    bodyParser = require('body-parser'),
+    route = require('route'),
+    body_parser = require('body-parser'),
     mongoose = require('mongoose');
 
 var app = express(),
-    config = require('./config');
+    config = require('./config'),
+    allow_cross_domain = require('./allow-cross-domain');
 
-//connect to our database
-var connectionString = config.host + ":" + config.port + "/" + config.dbname;
+// routes
+var users_route = require('./routes/users'),
+    donation_requests_route = require('./routes/donation-requests');
 
-mongoose.connect(connectionString, function(err) {
+// connect to our database
+var connection_string = config.host + ":" + config.port + "/" + config.dbname;
+
+mongoose.connect(connection_string, function(err) {
     if (err) { throw err; }
     console.log('Succesfully connected to ' + config.dbname);
 });
 
-//Mongoose Connection Handlers
+// mongoose Connection Handlers
 mongoose.connection.on('error', function(err) {
     console.log(err);
 });
 
 app.set('title', 'BloodBank');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended : false }));
+app.use(body_parser.json());
+app.use(body_parser.urlencoded({ extended : false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(allow_cross_domain);
 
-app.get('/', function(req, res) {
-  res.send('Hello World!');
-});
+app.use('/users', users_route);
+app.use('/donation/requests', donation_requests_route);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
