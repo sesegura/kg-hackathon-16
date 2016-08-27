@@ -74,6 +74,11 @@
                 this.name = ''
                 this.email = ''
                 this.password = ''
+<<<<<<< HEAD
+                
+                this.login(result)
+=======
+>>>>>>> 2dc6afa1c6c9a5da58dc8be38dabc0fcf2ae730e
             }
         }
     };

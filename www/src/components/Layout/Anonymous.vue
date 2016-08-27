@@ -3,31 +3,11 @@
         <div class="navbar-fixed">
             <nav class="red darken-1" role="navigation">
                 <div class="nav-wrapper container">
-                    <a href="#!" class="brand-logo"></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li>
-                            <a v-link="'/home'">Inicio</a>
-                        </li>
-                        <li>
-                            <a v-link="'/home/login'">Login</a>
-                        </li>
-                        <li>
-                            <a v-link="'/home/register'">Register</a>
-                        </li>
-                    </ul>
-                    <ul id="nav-mobile" class="side-nav fixed">
-                        <li>
-                            <a v-link="'/home'">Inicio</a>
-                        </li>
-                        <li>
-                            <a v-link="'/home/login'">Login</a>
-                        </li>
-                        <li>
-                            <a v-link="'/home/register'">Register</a>
-                        </li>
-                    </ul>
-                    <a class="button-collapse" data-activates="nav-mobile"
-                    href="#"><i class="material-icons">menu</i></a>
+                <ul class="left">
+                    <li>
+                        <a v-link="'/home'"><i class="material-icons">home</i></a>
+                    </li>
+                </ul>
                 </div>
             </nav>
         </div>
