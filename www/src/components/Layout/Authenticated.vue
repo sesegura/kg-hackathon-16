@@ -3,15 +3,20 @@
         <div class="navbar-fixed">
             <nav class="red darken-1" role="navigation">
                 <div class="nav-wrapper container">
-                    <a href="#!" class="brand-logo"></a>
                     <ul class="right hide-on-med-and-down">
                         <li>
                             <a v-link="'/dashboard'">Inicio</a>
+                        </li>
+                        <li class="gray">
+                            <a v-on:click="doLogout">Cerrar sesión</a>
                         </li>
                     </ul>
                     <ul id="nav-mobile" class="side-nav fixed">
                         <li>
                             <a v-link="'/dashboard'">Inicio</a>
+                        </li>
+                        <li class="gray">
+                            <a v-on:click="doLogout">Cerrar sesión</a>
                         </li>
                     </ul>
                     <a class="button-collapse" data-activates="nav-mobile"
@@ -26,3 +31,24 @@
         </div>
     </div>
 </template>
+
+<script>
+
+    import router from '../../router';
+    import { login, logout } from '../../vuex/actions'
+
+    module.exports = {
+        vuex : {
+            actions: {
+                logout
+            }
+        },
+        methods : {
+            doLogout : function() {
+                this.logout()
+                this.$route.router.go('/home')
+            }
+        }
+    }
+
+</script>

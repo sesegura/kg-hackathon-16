@@ -1,7 +1,8 @@
 $(document).ready(function() {
-
-    $('.button-collapse').sideNav({
-        closeOnClick: true
-    });
-
+    var btn = $('.button-collapse');
+    if (btn) {
+        btn.sideNav({
+            closeOnClick: true
+        });
+    }
 });

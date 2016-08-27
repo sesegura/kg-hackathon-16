@@ -65,12 +65,15 @@
             },
 
             _handleSuccess (result) {
+                this._resetModel()
+                this.login(result)
+                this.$route.router.go('/dashboard')
+            },
+
+            _resetModel () {
                 this.name = ''
                 this.email = ''
                 this.password = ''
-                
-                this._resetModel()
-                this.login(result)
             }
         }
     };

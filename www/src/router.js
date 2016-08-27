@@ -44,73 +44,89 @@ router.map({
     guest: true,
     subRoutes : {
       '/': {
-        component: Home
+        component: Home,
+        guest: true
       },
       '/login': {
-        component: Login
+        component: Login,
+        guest: true
       },
       '/register': {
-        component: Register
+        component: Register,
+        guest: true
       }
     }
   },
     '/onboarding' : {
         component : Onboarding,
+        secure: true,
         subRoutes : {
             '/bloodtype' : {
-                component : BloodTypeSelector
+                component : BloodTypeSelector,
+                secure: true
             },
             '/age' : {
-                component : AgeInput
+                component : AgeInput,
+                secure: true
             },
             '/weight' : {
-                component : WeightInput            
+                component : WeightInput,
+                secure: true
             },
             '/diseases' : {
-                component : DiseasesSelector            
+                component : DiseasesSelector,
+                secure: true
             },
             '/surgeries' : {
-                component : SurgeriesSelector            
+                component : SurgeriesSelector,
+                secure: true
             },
             '/drugs' : {
-                component : DrugsSelector            
+                component : DrugsSelector,
+                secure: true
             },
             '/tattoos' : {
-                component : TattoosSelector            
-            },      
+                component : TattoosSelector,
+                secure: true
+            },
             '/thanks' : {
-                component : ThankYou            
-            },                                                      
-    },  
-  '/': {
-    component: Authenticated,
-    // secure: true,
-    subRoutes: {
-      '/dashboard': {
-        component: Dashboard
-      }
-     }
+                component : ThankYou,
+                secure: true
+            }
     }
   },
-
+  '/': {
+    component: Authenticated,
+    secure: true,
+    subRoutes: {
+      '/dashboard': {
+        component: Dashboard,
+        secure: true
+      }
+     }
+    },
   '*': {
     component: NotFound
   }
 })
 
 router.alias({
-  '/login': '/home/login',
-  '/logout': '/dashboard/logout'
+  '/login': '/home/login'
 })
 
 router.beforeEach(function (transition) {
-  if (transition.to.guest && store.state.auth) {
+  var auth = transition.to.router.app.$store.state.auth;
+
+  if (transition.to.guest && auth) {
     transition.redirect('/dashboard')
   }
-  if (transition.to.secure && !store.state.auth) {
+  if (transition.to.secure && !auth) {
     transition.redirect('/home')
   }
-  if (transition.to.path === '/dashboard/logout') {
+  if (transition.to.path === '/') {
+    transition.redirect('/dashboard')
+  }
+  if (transition.to.path === '/logout') {
     logout(store)
     transition.redirect('/home')
   }
