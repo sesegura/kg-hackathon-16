@@ -5,7 +5,7 @@
             <a class="btn-large waves-effect waves-light orange lighten-2 col s10 offset-s1" href="#">Login</a>
         </div>
         <div class="row center">
-            <a class="btn-large waves-effect waves-light orange col s10 offset-s1" href="#">Registro</a>
+            <a class="btn-large waves-effect waves-light orange col s10 offset-s1" v-link="'/register'">Registro</a>
         </div>
     </div>
 </template>

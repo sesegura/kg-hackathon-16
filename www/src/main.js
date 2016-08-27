@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Login from './components/Login.vue'
+import Home from './components/Home.vue'
+import Register from './components/Register.vue'
 
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -11,14 +12,17 @@ Vue.use(VueRouter)
 const router = new VueRouter()
 
 router.map({
-  '/login': {
-    component: Login
+  '/home': {
+    component: Home
+  },
+  '/register': {
+    component: Register
   }
 })
 
 // Any invalid route will redirect to home
 router.redirect({
-  '*': '/login'
+  '*': '/home'
 })
 
 router.start(App, '#app')
