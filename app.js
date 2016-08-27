@@ -1,3 +1,6 @@
+/*jshint strict:false */
+/*jslint node: true */
+
 'use strict';
 
 //Dependencies
@@ -13,7 +16,7 @@ var app = express(),
 var connectionString = config.connection + config.dbname;
 
 mongoose.connect(connectionString, function(err) {
-  if (err) throw err;
+  if (err) { throw err; }
   console.log('Succesfully connected to ' + config.dbname);
 });
 
@@ -22,13 +25,13 @@ mongoose.connection.on('error', function(err) {
   console.log(err);
 });
 
-app.set('title',"BloodBank");
+app.set('title', 'BloodBank');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended : false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
   res.send('Hello World!');
 });
 
@@ -39,6 +42,6 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-app.listen(3000, function () {
+app.listen(3000, function() {
   console.log('Example app listening on port 3000!');
 });
