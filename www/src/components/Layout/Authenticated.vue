@@ -1,5 +1,5 @@
 <template>
-    <div class="anonymous">
+    <div class="authenticated">
         <div class="navbar-fixed">
             <nav class="red darken-1" role="navigation">
                 <div class="nav-wrapper container">
