@@ -1,5 +1,5 @@
 module.exports = {
     dbname: "bloodbank",
-    connection : "mongodb://localhost",
+    host : "mongodb://localhost",
     port : "27026"
 };
