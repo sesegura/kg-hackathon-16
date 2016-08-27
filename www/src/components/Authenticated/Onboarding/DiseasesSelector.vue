@@ -16,16 +16,15 @@
                 diseases : ['Anemia', 'Cáncer', 'Hepatitis', 'Enfermedades Venéreas']
             }
         },
-        
         methods : {
             onNoSelected : function () {
                 localStorage.setItem('has_diseases', false)
                 // router.go()
             },
-            
+
             onYesSelected : function() {
                 localStorage.setItem('has_diseases', true)
-                // router.go()            
+                // router.go()
             }
         }
     };
