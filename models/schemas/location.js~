@@ -1,0 +1,9 @@
+'use strict';
+
+var mongoose = require('mongoose');
+
+module.exports = new mongoose.Schema({
+    latitude : {type : Number},
+    longitude : {type : Number}
+});
+
