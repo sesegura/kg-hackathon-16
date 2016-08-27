@@ -69,7 +69,6 @@
                 this.email = ''
                 this.password = ''
                 
-                this._resetModel()
                 this.login(result)
             }
         }
