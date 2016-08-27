@@ -13,16 +13,16 @@ var app = express(),
     config = require('./config');
 
 //connect to our database
-var connectionString = config.connection + ":" + config.port + "/" + config.dbname;
+var connectionString = config.host + ":" + config.port + "/" + config.dbname;
 
 mongoose.connect(connectionString, function(err) {
-  if (err) { throw err; }
-  console.log('Succesfully connected to ' + config.dbname);
+    if (err) { throw err; }
+    console.log('Succesfully connected to ' + config.dbname);
 });
 
 //Mongoose Connection Handlers
 mongoose.connection.on('error', function(err) {
-  console.log(err);
+    console.log(err);
 });
 
 app.set('title', 'BloodBank');
@@ -43,5 +43,6 @@ app.use(function(req, res, next) {
 });
 
 app.listen(3000, function() {
-  console.log('Example app listening on port 3000!');
+  console.log('Unagi!!');
 });
+

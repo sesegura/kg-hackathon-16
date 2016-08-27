@@ -4,12 +4,12 @@ var mongoose = require('mongoose'),
         donnor_information : require('./donnor-information')
     }
 
-var userSchema = mongoose.Schema({
+var user_schema = mongoose.Schema({
     first_name : {type : String, required : true},
     last_name : {type : String, required : true},
-    age : {type : Number, required : true},
     email : {type : String, required : true},
+    password : {type : String, required : true},
     donnor_information : [schemas.donnor_information]
 });
 
-return userSchema;
+return user_schema;

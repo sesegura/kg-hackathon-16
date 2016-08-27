@@ -1,10 +1,7 @@
 'use strict';
-var mongoose = require('mongoose'),
-    schemas = {
-        donnor_information : require('./donnor-information')
-    }
+var mongoose = require('mongoose');
 
-var user_schema = mongoose.Schema({
+var donnor_information_schema = mongoose.Schema({
     first_name : {type : String, required : true},
     last_name : {type : String, required : true},
     age : {type : Number, required : true},
@@ -12,4 +9,4 @@ var user_schema = mongoose.Schema({
     donnor_information : [schemas.donnor_information]
 });
 
-return user_schema;
+return userSchema;
