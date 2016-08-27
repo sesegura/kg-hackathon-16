@@ -123,6 +123,9 @@ router.beforeEach(function (transition) {
   if (transition.to.secure && !auth) {
     transition.redirect('/home')
   }
+  if (transition.to.path === '/onboarding') {
+    transition.redirect('/onboarding/bloodtype')
+  }
   if (transition.to.path === '/') {
     transition.redirect('/dashboard')
   }

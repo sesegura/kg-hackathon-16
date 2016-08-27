@@ -48,6 +48,14 @@
                 this.logout()
                 this.$route.router.go('/home')
             }
+        },
+        ready : function() {
+            var btn = $('.button-collapse');
+            if (btn) {
+                btn.sideNav({
+                    closeOnClick: true
+                });
+            }
         }
     }
 
