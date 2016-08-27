@@ -43,6 +43,6 @@ app.use(function(req, res, next) {
 });
 
 app.listen(3000, function() {
-  console.log('KG-Hackathon 2016: Unagi!!');
+  console.log('Unagi!!');
 });
 

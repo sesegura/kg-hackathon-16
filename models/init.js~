@@ -1,0 +1,13 @@
+'use strict';
+
+var mongoose = 	require('mongoose');
+
+var schemas = {
+    user : require('./schemas/user')
+};
+
+module.exports = {
+    User : mongoose.model('user', schemas.user()),
+    DonationRequest : mongoose.model('donation_request', schemas.donation_request())
+};
+
