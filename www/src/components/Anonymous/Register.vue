@@ -28,6 +28,8 @@
 </template>
 
 <script>
+    import { login, logout } from '../../vuex/actions'
+
     module.exports = {
         data : function() {
             return {
@@ -36,31 +38,39 @@
                 password : ''
             };
         },
-        
+
+        vuex : {
+            actions: {
+                login
+            }
+        },
+
         methods : {
-            submit : function() {         
+            submit : function() {
                 var data = {
                     name : this.name,
                     email : this.email,
                     password : this.password
                 };
-                
-                debugger;
+
                 $.ajax({
                     method : 'POST',
                     url : 'http://localhost:3000/users',
                     data : data,
-                    success : this._resetModel.call(this),
+                    success : this._handleSuccess.bind(this),
                     error : function(){}
-                });
+                })
             },
-            
-            _resetModel : function() {
-                alert('success');
-                this.name = '';
-                this.email = '';
-                this.password = '';
-                // continue...
+
+            _handleSuccess (result) {
+                this._resetModel()
+                this.login(result)
+            },
+
+            _resetModel : function(result) {
+                this.name = ''
+                this.email = ''
+                this.password = ''
             }
         }
     };
