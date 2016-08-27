@@ -1,8 +1,15 @@
 <template>
-    <div></div>
+    <div>
+        <h1>¡Estás listo para salvar vidas!</h1>
+        <img src="" />
+        <p>¡Calificás como donador!</p>
+        <button v-on:click="next">¿Dónde puedo donar?</button>
+    </div>
 </template>
 
 <script>
+    import router from '../../../router';
+
     module.exports = {
         ready : function() {
             var id_user = ''
@@ -22,6 +29,12 @@
                 data : data,
                 success : $.noop
             });
+        },
+        
+        methods : {
+            next : function() {
+                router.go('/bloodbank')
+            }
         }
     };
 </script>

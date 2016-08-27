@@ -1,0 +1,43 @@
+<template>
+    <div>
+        <div class="container">
+            <div v-for="request in requests">
+                <h3>{{request._id}}</h3>
+                <span>{{requestors.length}} receptores en espera</span>
+                <ul>
+                    <li v-for={{requestor in request.requestors}}>
+                        <p>{{requestor}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    module.exports = {
+        data : function() {
+            return {
+                requests : []
+            }
+        },
+
+        ready : function() {
+            $.ajax({
+                method : 'GET',
+                url : 'http://localhost:3000/donation/requests',
+                success : this.handleSuccess.bind(this)
+            })
+        },
+        
+        methods : {
+            handleSuccess : function(data) {
+                this.requests = data
+            },
+            
+            bla : function(a) {
+                debugger;
+            }
+        }
+    }
+</script>

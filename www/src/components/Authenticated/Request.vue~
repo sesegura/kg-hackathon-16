@@ -1,0 +1,64 @@
+<template>
+    <h1>Solicitá donaciones</h1>
+    <input type="text" v-model="donnor_name" />
+    <label>Nombre de quién necesita la donación</label>
+    
+    <input type="text" v-model="location" />
+    <label>Banco de sangre</label>
+    
+    <input type="text" v-model="quantity" />
+    <label>Cantidad de bolsas de sangre que requiere</label>
+    
+    <input type="text" v-model="reason" />
+    <label>¿Por qué necesita la sangre?</label>    
+    
+    
+    <button v-on:click="share">Solicitar</button>    
+   
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+</template>
+
+<script>
+    module.exports = {
+        data : function() {
+            return {
+                donnor_name : '',
+                location : '',
+                quantity : 0,
+                reason : ''
+            }
+        },
+        
+        methods : {
+            submit : function() {
+                var data = {
+                    donnor_name : this.donnor_name,
+                    location : this.location,
+                    quantity : this.quantity,
+                    reason : this.reason
+                }
+                
+                $.ajax({
+                    method : 'POST',
+                    url : 'http://localhost:3000/donation/requests',
+                    data : data,
+                    success : this.share.bind(this)
+                })
+            },
+            
+            share : function () {
+                $('#modal1').openModal();
+            }
+        }
+    }
+</script>
+
