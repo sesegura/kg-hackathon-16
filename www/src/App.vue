@@ -6,12 +6,12 @@
                     <a href="#!" class="brand-logo"></a>
                     <ul class="right hide-on-med-and-down">
                         <li>
-                            <a href="#">Navbar Link</a>
+                            <a v-link="'/home'"><i class="material-icons">home</i> Inicio</a>
                         </li>
                     </ul>
                     <ul id="nav-mobile" class="side-nav fixed">
                         <li>
-                            <a href="#">Navbar Link</a>
+                            <a v-link="'/home'"><i class="material-icons">home</i> Inicio</a>
                         </li>
                     </ul>
                     <a class="button-collapse" data-activates="nav-mobile"
