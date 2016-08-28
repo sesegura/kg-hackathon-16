@@ -37,7 +37,8 @@
             return {
                 name : '',
                 email : '',
-                password : ''
+                password : '',
+                image : '../../../static/images/card-1.png'
             };
         },
 

@@ -29,7 +29,6 @@ import TattoosSelector from './components/Authenticated/Onboarding/TattoosSelect
 import ThankYou from './components/Authenticated/Onboarding/ThankYou.vue'
 
 import Bloodbank from './components/Authenticated/Bloodbank.vue'
-import Request from './components/Authenticated/Request.vue'
 
 // Anonymous components
 import Home from './components/Anonymous/Home.vue'
@@ -109,11 +108,7 @@ router.map({
       '/bloodbank' : {
         component : Bloodbank,
         secure : true
-      },
-      '/request' : {
-        component : Request,
-        secure : true
-       }
+      }
      }
     },
   '*': {
