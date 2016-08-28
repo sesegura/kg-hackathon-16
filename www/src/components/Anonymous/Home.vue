@@ -1,10 +1,7 @@
 <template>
     <div>
         <div class="row center">
-            <img src="/logo-fullcolor-152x152.png" />
-        </div>
-        <div class="row center">
-            <h3 class="header center black-text">o positivo</h3>
+            <img src="/logo-con-iso.png" />
         </div>
         <div class="row center">
             <a class="btn-large waves-effect waves-light red accent-2 col s10 offset-s1" v-link="'/home/register'">Registro</a>

@@ -35,12 +35,17 @@
 
     <!-- Modal Structure -->
     <div id="modal1" class="modal" style="width:355px;>
-        <div class="modal-content" style="padding:0px; width:320px;">
-            <img src="/solicitud-pop-up.png"
-                style="width: 355px;"/>
+        <div class="modal-content sebas" style="padding:0px;">
+            <img class="sebas" src="/solicitud-pop-up.png" />
         </div>
     </div>
 </template>
+
+<style>
+    .sebas {
+        width : 90%;
+    }
+</style>
 
 <script>
     module.exports = {

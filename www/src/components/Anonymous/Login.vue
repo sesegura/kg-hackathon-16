@@ -1,6 +1,8 @@
 <template>
     <div class="row">
-        <h1 class="header center orange-text">Login</h1>
+        <div class="col s12 center">
+            <img src="/logo-con-iso.png" />
+        </div>
         <form class="col s12">
             <div class="row">
                 <div class="input-field col s12">
@@ -15,7 +17,7 @@
                 </div>
             </div>
             <div class="row center">
-                <button class="btn-large waves-effect waves-light" type="submit" name="action">Login</button>
+                <button class="btn-large waves-effect waves-light red accent-2" type="submit" name="action">iniciar sesión</button>
             </div>
         </form>
     </div>

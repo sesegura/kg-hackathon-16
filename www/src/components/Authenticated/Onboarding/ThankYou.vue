@@ -1,11 +1,13 @@
 <template>
-    <div>
-        <h5 class="center white-text">¡Estás listo para salvar vidas!</h5>
+    <div class="row center">
+        <h5 class="white-text">¡Estás listo para<br>salvar vidas!</h5>
+    </div>
+    <div class="row center">
         <img src="../../../../static/images/logo-white.png" style="margin-left:10px;"/>
         <p>¡Calificás como donador!</p>
-        <div class="row center">
-            <button v-on:click="next" class="btn waves-effect waves-light red accent-2" type="submit" name="action">¿Dónde puedo donar?</button>
-        </div>        
+    </div>
+    <div class="row center">
+        <button v-on:click="next" class="btn waves-effect waves-light white red-text" type="submit" name="action">¿Dónde puedo donar?</button>
     </div>
 </template>
 

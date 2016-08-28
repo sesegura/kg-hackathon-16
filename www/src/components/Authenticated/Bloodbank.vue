@@ -1,9 +1,15 @@
 <template>
     <div>
-        <img src="/card-1.png" style="width:345px;" />
-        <img src="/card-2.png" style="width:345px;" />
+        <img class="card" src="/card-1.png" />
+        <img class="card" src="/card-2.png" />
     </div>
 </template>
+
+<style>
+    .card {
+        width : 100%;
+    }
+</style>
 
 <script>
     module.exports = {
