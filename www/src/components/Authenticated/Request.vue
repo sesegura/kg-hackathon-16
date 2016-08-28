@@ -30,7 +30,7 @@
     </div>
 
     <div class="row center">
-        <button v-on:click="share" class="btn waves-effect waves-light red accent-2" type="submit" name="action">Solicitar</button>
+        <button v-on:click="share" class="btn-large waves-effect waves-light red accent-2" type="submit" name="action">Solicitar</button>
     </div>
 
     <!-- Modal Structure -->

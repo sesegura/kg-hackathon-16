@@ -1,5 +1,11 @@
 <template>
     <div>
-        <img src="/perfil.png" styles="width:100%;display:block;">
+        <img class="profile-img" src="/perfil.png" />
     </div>
 </template>
+
+<style>
+    .profile-img {
+        width: 100%;
+    }
+</style>

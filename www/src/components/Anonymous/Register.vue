@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <h1 class="header center orange-text">Registro</h1>
+        <h3 class="header center black-text">Registro</h3>
         <form class="col s12">
             <div class="row">
                 <div class="input-field col s12">
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="row center">
-                <button v-on:click="submit" class="btn waves-effect waves-light" type="submit" name="action">Registrar</button>
+                <button v-on:click="submit" class="btn-large waves-effect waves-light red accent-2" type="submit" name="action">Registrar</button>
             </div>
         </form>
     </div>

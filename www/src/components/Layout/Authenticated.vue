@@ -1,7 +1,7 @@
 <template>
     <div class="authenticated">
         <div class="navbar-fixed">
-            <nav class="red darken-1" role="navigation">
+            <nav class="yulz" role="navigation">
                 <div class="nav-wrapper container">
                     <ul class="right hide-on-med-and-down">
                         <li>
