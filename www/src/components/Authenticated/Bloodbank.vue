@@ -1,7 +1,7 @@
 <template>
     <div>
-        <img src="../../../static/images/card-1.png" style="width:345px;" />           
-        <img src="../../../static/images/card-2.png" style="width:345px;" />                   
+        <img src="/card-1.png" style="width:290px;" />
+        <img src="/card-2.png" style="width:290px;" />
     </div>
 </template>
 
@@ -20,12 +20,12 @@
                 success : this.handleSuccess.bind(this)
             })
         },
-        
+
         methods : {
             handleSuccess : function(data) {
                 this.requests = data
             },
-            
+
             bla : function(a) {
                 debugger;
             }

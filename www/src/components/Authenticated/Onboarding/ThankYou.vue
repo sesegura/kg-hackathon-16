@@ -15,16 +15,16 @@
     module.exports = {
         ready : function() {
             var id_user = ''
-            
+
             var data = {
                 age : '',
                 weight : '',
                 has_diseases : '',
                 has_surgeries : '',
                 has_drugs : '',
-                has_tattoos : ''            
+                has_tattoos : ''
             }
-            
+
             $.ajax({
                 method : 'PUT',
                 url : 'http://localhost:3000/users/' + id_user,
@@ -32,7 +32,7 @@
                 success : $.noop
             });
         },
-        
+
         methods : {
             next : function() {
                 router.go('/bloodbank')

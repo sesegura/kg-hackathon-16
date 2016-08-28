@@ -1,12 +1,16 @@
 <template>
     <div>
-        <h1 class="header center orange-text">Salva vidas!</h1>
-        <h3>Dona!</h3>
         <div class="row center">
-            <a class="btn-large waves-effect waves-light orange lighten-2 col s10 offset-s1" v-link="'/onboarding/bloodtype'">Donar</a>
+            <img src="/logo-fullcolor-152x152.png" />
         </div>
         <div class="row center">
-            <a class="btn-large waves-effect waves-light orange col s10 offset-s1" v-link="'/request'">Solicitar</a>
+            <h5 class="header center grey-text">¡Salvá vidas!</h5>
+        </div>
+        <div class="row center">
+            <a class="btn-large waves-effect waves-light red lighten-2 col s10 offset-s1" v-link="'/onboarding/bloodtype'">Donar</a>
+        </div>
+        <div class="row center">
+            <a class="btn-large waves-effect waves-light white red-text col s10 offset-s1" v-link="'/request'">Solicitar</a>
         </div>
     </div>
 </template>

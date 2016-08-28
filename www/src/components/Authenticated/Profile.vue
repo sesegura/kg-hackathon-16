@@ -1,9 +1,5 @@
 <template>
     <div>
-        <img src="../../../static/images/perfil.png" styles="width:320px;"/>
+        <img src="/perfil.png" styles="width:100%;display:block;">
     </div>
 </template>
-
-<script>
-</script>
-

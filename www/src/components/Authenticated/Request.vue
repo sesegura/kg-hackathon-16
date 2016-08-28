@@ -35,7 +35,7 @@
     <!-- Modal Structure -->
     <div id="modal1" class="modal" style="width:355px;>
         <div class="modal-content" style="padding:0px; width:320px;">
-            <img src="../../../static/images/solicitud-pop-up.png" 
+            <img src="/solicitud-pop-up.png"
                 style="width: 355px;"/>
         </div>
     </div>
@@ -51,7 +51,7 @@
                 reason : ''
             }
         },
-        
+
         methods : {
             submit : function() {
                 var data = {
@@ -60,7 +60,7 @@
                     quantity : this.quantity,
                     reason : this.reason
                 }
-                
+
                 $.ajax({
                     method : 'POST',
                     url : 'http://localhost:3000/donation/requests',
@@ -68,7 +68,7 @@
                     success : this.share.bind(this)
                 })
             },
-            
+
             share : function () {
                 $('#modal1').openModal();
             }
