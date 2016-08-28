@@ -16,9 +16,10 @@
     <button v-on:click="share">Solicitar</button>    
    
     <!-- Modal Structure -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <img />
+    <div id="modal1" class="modal" style="width:300px;>
+        <div class="modal-content" style="padding:0px; width:320px;">
+            <img src="../../../static/images/solicitud_pop-up.png" 
+                style="width: 300px;"/>
         </div>
     </div>
 </template>

@@ -1,16 +1,6 @@
 <template>
     <div>
-        <div class="container">
-            <div v-for="request in requests">
-                <h3>{{request._id}}</h3>
-                <span>{{requestors.length}} receptores en espera</span>
-                <ul>
-                    <li v-for={{requestor in request.requestors}}>
-                        <p>{{requestor}}</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <img src="../../../static/images/card-1.png" style="width:290px;" />           
     </div>
 </template>
 
