@@ -80,6 +80,9 @@ module.exports = {
     formatter: require('eslint-friendly-formatter')
   },
   vue: {
-    loaders: utils.cssLoaders()
+    loaders: utils.cssLoaders(),
+    html: {
+      root: path.resolve(__dirname, '../src/assets')
+    }
   }
 }

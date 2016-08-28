@@ -22,10 +22,10 @@
                             <a v-link="'/dashboard'">Inicio</a>
                         </li>
                         <li>
-                            <a v-link="'/dashboard/profile'">Carné</a>
+                            <a v-link="'/profile'">Carné</a>
                         </li>
                         <li>
-                            <a v-link="'/dashboard/donations'">Donaciones</a>
+                            <a v-link="'/bloodbank'">Donaciones</a>
                         </li>
                         <li>
                             <a v-on:click="doLogout">Cerrar sesión</a>
