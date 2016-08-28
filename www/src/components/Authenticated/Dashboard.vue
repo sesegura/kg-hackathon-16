@@ -7,7 +7,7 @@
             <h5 class="header center grey-text">¡Salvá vidas!</h5>
         </div>
         <div class="row center">
-            <a class="btn-large waves-effect waves-light red lighten-2 col s10 offset-s1" v-link="'/onboarding/bloodtype'">Donar</a>
+            <a class="btn-large waves-effect waves-light red accent-2 col s10 offset-s1" v-link="'/onboarding/bloodtype'">Donar</a>
         </div>
         <div class="row center">
             <a class="btn-large waves-effect waves-light white red-text col s10 offset-s1" v-link="'/request'">Solicitar</a>

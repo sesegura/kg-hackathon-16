@@ -4,8 +4,8 @@
     </div>
     <div class="row">
         <form class="col s12">
-            <button v-on:click="onYesSelected" class="btn waves-effect waves-light red lighten-2" name="action"><i class="material-icons">check_circle</i> si</button>
-            <button v-on:click="onNoSelected" class="btn waves-effect waves-light red lighten-2" name="action"><i class="material-icons">cancel</i> no</button>
+            <button v-on:click="onYesSelected" class="btn waves-effect waves-light red accent-2" name="action"><i class="material-icons">check_circle</i> si</button>
+            <button v-on:click="onNoSelected" class="btn waves-effect waves-light red accent-2" name="action"><i class="material-icons">cancel</i> no</button>
         </form>
     </div>
 </template>
