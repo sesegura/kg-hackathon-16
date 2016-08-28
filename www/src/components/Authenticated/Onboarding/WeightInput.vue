@@ -1,23 +1,33 @@
 <template>
-    <div>
-        <input type="text" placeholder="Peso" v-model="weight"/>
-        <div class="row center">
-            <a class="btn-large waves-effect waves-light orange col s10 offset-s1" v-on:click="next">Continuar</a>
-        </div>
+    <div class="row">
+        <h5 class="center white-text">¿Cuánto pesas?</h5>
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="number" class="center-align" placeholder="58" v-model="weight"/>
+                </div>
+            </div>
+            <div class="row center">
+                <button v-on:click="submit" class="btn waves-effect waves-light red lighten-2" type="submit" name="action">Siguiente</button>
+            </div>
+        </form>
     </div>
 </template>
 
 <script>
+
+    var LS_WEIGHT = 'weight';
+
     module.exports = {
         data : function() {
             return {
-                weight : ''
+                weight : localStorage.getItem(LS_WEIGHT) || 58
             }
         },
-        
         methods : {
-            next : function() {
-                localStorage.setItem('weight', this.weight);
+            submit : function() {
+                localStorage.setItem(LS_WEIGHT, this.weight);
+                this.$route.router.go('/onboarding/diseases');
             }
         }
     };
