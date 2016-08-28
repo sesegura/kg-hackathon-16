@@ -1,25 +1,42 @@
 <template>
     <h1>Solicitá donaciones</h1>
-    <input type="text" v-model="donnor_name" />
-    <label>Nombre de quién necesita la donación</label>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="name" type="text" v-model="donnor_name" class="validate">
+            <label for="name">Nombre de quién necesita la donación</label>
+        </div>
+    </div>
     
-    <input type="text" v-model="location" />
-    <label>Banco de sangre</label>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="location" type="text" v-model="location" class="validate">
+            <label for="location">Banco de sangre</label>
+        </div>
+    </div>
     
-    <input type="text" v-model="quantity" />
-    <label>Cantidad de bolsas de sangre que requiere</label>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="quantity" type="text" v-model="quantity" class="validate">
+            <label for="quantity">Cantidad de bolsas de sangre que requiere</label>
+        </div>
+    </div>    
     
-    <input type="text" v-model="reason" />
-    <label>¿Por qué necesita la sangre?</label>    
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="reason" type="text" v-model="reason" class="validate">
+            <label for="reason">¿Por qué necesita la sangre?</label>
+        </div>
+    </div>      
     
-    
-    <button v-on:click="share">Solicitar</button>    
+    <div class="row center">
+        <button v-on:click="share" class="btn waves-effect waves-light" type="submit" name="action">Solicitar</button>
+    </div>      
    
     <!-- Modal Structure -->
-    <div id="modal1" class="modal" style="width:300px;>
+    <div id="modal1" class="modal" style="width:355px;>
         <div class="modal-content" style="padding:0px; width:320px;">
             <img src="../../../static/images/solicitud-pop-up.png" 
-                style="width: 300px;"/>
+                style="width: 355px;"/>
         </div>
     </div>
 </template>
@@ -30,7 +47,7 @@
             return {
                 donnor_name : '',
                 location : '',
-                quantity : 0,
+                quantity : '',
                 reason : ''
             }
         },
