@@ -1,14 +1,17 @@
 <template>
     <div class="row">
-        <h5 class="center white-text">¿Padeces de alguna de las siguientes enfermedades?</h5>
-        <div class="col s12 center">
-            <div v-for="disease in diseases">{{disease}}</div>
+        <div class="row">
+            <h5 class="center white-text">¿Padeces de alguna de las siguientes enfermedades?</h5>
+            <div class="col s12 center">
+                <h6 v-for="disease in diseases">{{disease}}</h6>
+            </div>
         </div>
-        <br>
-        <form class="col s12">
-            <button v-on:click="onNoSelected" class="btn waves-effect waves-light red lighten-2" type="submit" name="action"><i class="material-icons">cancel</i> no</button>
-            <button v-on:click="onYesSelected" class="btn waves-effect waves-light red lighten-2" type="submit" name="action"><i class="material-icons">check_circle</i> si</button>
-        </form>
+        <div class="row">
+            <form class="col s12">
+                <button v-on:click="onYesSelected" class="btn waves-effect waves-light red lighten-2" name="action"><i class="material-icons">check_circle</i> si</button>
+                <button v-on:click="onNoSelected" class="btn waves-effect waves-light red lighten-2" name="action"><i class="material-icons">cancel</i> no</button>
+            </form>
+        </div>
     </div>
 </template>
 

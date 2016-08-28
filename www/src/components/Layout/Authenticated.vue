@@ -7,7 +7,13 @@
                         <li>
                             <a v-link="'/dashboard'">Inicio</a>
                         </li>
-                        <li class="gray">
+                        <li>
+                            <a v-link="'/dashboard/profile'">Carné</a>
+                        </li>
+                        <li>
+                            <a v-link="'/dashboard/donations'">Donaciones</a>
+                        </li>
+                        <li>
                             <a v-on:click="doLogout">Cerrar sesión</a>
                         </li>
                     </ul>
@@ -15,7 +21,13 @@
                         <li>
                             <a v-link="'/dashboard'">Inicio</a>
                         </li>
-                        <li class="gray">
+                        <li>
+                            <a v-link="'/dashboard/profile'">Carné</a>
+                        </li>
+                        <li>
+                            <a v-link="'/dashboard/donations'">Donaciones</a>
+                        </li>
+                        <li>
                             <a v-on:click="doLogout">Cerrar sesión</a>
                         </li>
                     </ul>
