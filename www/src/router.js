@@ -30,6 +30,7 @@ import ThankYou from './components/Authenticated/Onboarding/ThankYou.vue'
 
 import Bloodbank from './components/Authenticated/Bloodbank.vue'
 import Request from './components/Authenticated/Request.vue'
+import Profile from './components/Authenticated/Profile.vue'
 
 // Anonymous components
 import Home from './components/Anonymous/Home.vue'
@@ -113,7 +114,11 @@ router.map({
       '/request' : {
         component : Request,
         secure : true
-       }
+       },
+      '/profile' : {
+        component : Profile,
+        secure : true
+       }       
      }
     },
   '*': {
