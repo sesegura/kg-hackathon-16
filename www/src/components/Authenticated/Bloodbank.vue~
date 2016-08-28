@@ -1,12 +1,7 @@
 <template>
     <div>
-<<<<<<< HEAD
-        <img src="../../../static/images/card-1.png" style="width:345px;" />           
-        <img src="../../../static/images/card-2.png" style="width:345px;" />                   
-=======
         <img src="/card-1.png" style="width:290px;" />
         <img src="/card-2.png" style="width:290px;" />
->>>>>>> 1930ca817b4579bfca4b0f1080fa384e604671f5
     </div>
 </template>
 

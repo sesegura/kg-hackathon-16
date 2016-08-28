@@ -1,7 +1,7 @@
 <template>
     <div>
-        <img src="/card-1.png" style="width:290px;" />
-        <img src="/card-2.png" style="width:290px;" />
+        <img src="/card-1.png" style="width:345px;" />
+        <img src="/card-2.png" style="width:345px;" />
     </div>
 </template>
 

@@ -24,13 +24,6 @@
                 has_drugs : '',
                 has_tattoos : ''
             }
-
-            $.ajax({
-                method : 'PUT',
-                url : 'http://localhost:3000/users/' + id_user,
-                data : data,
-                success : $.noop
-            });
         },
 
         methods : {

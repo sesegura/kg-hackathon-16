@@ -1,15 +1,23 @@
 <template>
     <div>
-        <p>blabla</p>
-        <div v-for="drug in drugs">{{drug}}</div>
-        <div>
-            <button v-on:click="onNoSelected">No</button>
-            <button v-on:click="onYesSelected">Si</button>
+        <div class="row">
+            <h5 class="center white-text">¿Consumís alguna de las siguientes drogas?</h5>
+            <div class="col s12 center">
+                <h6 v-for="drug in drugs">{{drug}}</h6>
+            </div>
+        </div>
+        <div class="row">
+            <form class="col s12">
+                <button v-on:click="onYesSelected" class="btn btn-flat waves-effect waves-light red lighten-2" name="action"><i class="material-icons" style="color:white;font-size:30px;">check_circle</i></button>
+                <button v-on:click="onNoSelected" class="btn btn-flat waves-effect waves-light red lighten-2" name="action"><i class="material-icons" style="color:white;font-size:30px;">cancel</i></button>
+            </form>
         </div>
     </div>
 </template>
 
 <script>
+    var LS_DRUGS = 'has_drugs';
+    
     module.exports = {
         data : function() {
             return {
@@ -19,13 +27,12 @@
         
         methods : {
             onNoSelected : function () {
-                localStorage.setItem('has_drugs', false)
-                // router.go()
+                localStorage.setItem(LS_DRUGS, false)
+                this.$route.router.go('/onboarding/thanks')
             },
-            
             onYesSelected : function() {
-                localStorage.setItem('has_drugs', true)
-                // router.go()            
+                localStorage.setItem(LS_DRUGS, true)
+                this.$route.router.go('/onboarding/thanks')
             }
         }
     };
