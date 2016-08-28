@@ -8,8 +8,8 @@
         </div>
         <div class="row">
             <form class="col s12">
-                <button v-on:click="onYesSelected" class="btn btn-flat waves-effect waves-light red lighten-2" name="action"><i class="material-icons" style="color:white;font-size:30px;">check_circle</i></button>
-                <button v-on:click="onNoSelected" class="btn btn-flat waves-effect waves-light red lighten-2" name="action"><i class="material-icons" style="color:white;font-size:30px;">cancel</i></button>
+                <button v-on:click="onYesSelected" class="btn btn-flat waves-effect waves-light red accent-2" name="action"><i class="material-icons" style="color:white;font-size:30px;">check_circle</i></button>
+                <button v-on:click="onNoSelected" class="btn btn-flat waves-effect waves-light red accent-2" name="action"><i class="material-icons" style="color:white;font-size:30px;">cancel</i></button>
             </form>
         </div>
     </div>

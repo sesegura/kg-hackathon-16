@@ -1,5 +1,5 @@
 <template>
-    <div class="onboarding red lighten-2 center white-text valign-wrapper">
+    <div class="onboarding red accent-2 center white-text valign-wrapper">
         <div class="onboarding-content section valign">
             <div class="container">
                 <router-view></router-view>

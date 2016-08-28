@@ -1,37 +1,38 @@
 <template>
-    <h1>Solicitá donaciones</h1>
+    <h5 class="center">Solicitá donaciones</h5>
+
     <div class="row">
         <div class="input-field col s12">
             <input id="name" type="text" v-model="donnor_name" class="validate">
             <label for="name">Nombre de quién necesita la donación</label>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="input-field col s12">
             <input id="location" type="text" v-model="location" class="validate">
             <label for="location">Banco de sangre</label>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="input-field col s12">
             <input id="quantity" type="text" v-model="quantity" class="validate">
             <label for="quantity">Cantidad de bolsas de sangre que requiere</label>
         </div>
-    </div>    
-    
+    </div>
+
     <div class="row">
         <div class="input-field col s12">
             <input id="reason" type="text" v-model="reason" class="validate">
             <label for="reason">¿Por qué necesita la sangre?</label>
         </div>
-    </div>      
-    
+    </div>
+
     <div class="row center">
-        <button v-on:click="share" class="btn waves-effect waves-light" type="submit" name="action">Solicitar</button>
-    </div>      
-   
+        <button v-on:click="share" class="btn waves-effect waves-light red accent-2" type="submit" name="action">Solicitar</button>
+    </div>
+
     <!-- Modal Structure -->
     <div id="modal1" class="modal" style="width:355px;>
         <div class="modal-content" style="padding:0px; width:320px;">

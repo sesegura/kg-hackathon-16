@@ -4,7 +4,7 @@
         <img src="../../../../static/images/logo-white.png" style="margin-left:10px;"/>
         <p>¡Calificás como donador!</p>
         <div class="row center">
-            <button v-on:click="next" class="btn waves-effect waves-light red lighten-2" type="submit" name="action">¿Dónde puedo donar?</button>
+            <button v-on:click="next" class="btn waves-effect waves-light red accent-2" type="submit" name="action">¿Dónde puedo donar?</button>
         </div>        
     </div>
 </template>

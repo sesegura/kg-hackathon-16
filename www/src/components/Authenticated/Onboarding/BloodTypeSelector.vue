@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="row center">
-                <button v-on:click="submit" class="btn waves-effect waves-light red lighten-2" type="submit" name="action">Siguiente</button>
+                <button v-on:click="submit" class="btn waves-effect waves-light red accent-2" type="submit" name="action">Siguiente</button>
             </div>
         </form>
     </div>
